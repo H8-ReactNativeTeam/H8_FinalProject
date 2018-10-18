@@ -1,13 +1,8 @@
 import React, { Component } from "react";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Actions } from "react-native-router-flux";
 import {
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View
-} from "react-native";
-import { Actions, Router, Scene } from "react-native-router-flux";
-import {
+  Icon,
   FormLabel,
   FormInput,
   FormValidationMessage
@@ -24,15 +19,15 @@ class Register extends Component {
     };
   }
 
-  handleChangeEmail(text) {
+  handleChangeFirst(text) {
     this.setState({
-      email: text
+      firstName: text
     });
   }
 
-  handleChangePassword(text) {
+  handleChangeLast(text) {
     this.setState({
-      password: text
+      lastName: text
     });
   }
 
@@ -43,15 +38,15 @@ class Register extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Text style={styles.title}>What's your name?</Text>
+        <Text style={styles.label}>FIRST NAME</Text>
         <TextInput
-          onChangeText={e => this.handleChangeEmail(e)}
-          placeholder={"user@email.com"}
+          onChangeText={e => this.handleChangeFirst(e)}
           style={styles.textInput}
         />
+        <Text style={styles.label}>LAST NAME</Text>
         <TextInput
-          onChangeText={e => this.handleChangePassword(e)}
-          secureTextEntry={true}
-          placeholder={"Your super secret password"}
+          onChangeText={e => this.handleChangeLast(e)}
           style={styles.textInput}
         />
         <TouchableOpacity
@@ -65,7 +60,7 @@ class Register extends Component {
           }}
           onPress={() => this.handleLoginPress()}
         >
-          <Text>Login</Text>
+          <Text>Register</Text>
         </TouchableOpacity>
       </View>
     );

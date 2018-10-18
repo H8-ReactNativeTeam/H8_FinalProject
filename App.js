@@ -7,10 +7,10 @@ class App extends Component {
     return (
       <Router>
         <Scene key="root" hideNavBar>
-          <Scene key="welcome" component={Welcome} initial />
+          <Scene key="welcome" component={Welcome} />
           <Scene key="login" component={Login} />
           <Scene key="home" component={Home} />
-          <Scene key="register" component={Register} />
+          <Scene key="register" component={Register} initial />
         </Scene>
       </Router>
     );
