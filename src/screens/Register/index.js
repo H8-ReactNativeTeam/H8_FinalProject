@@ -38,16 +38,14 @@ class Register extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Icon name="arrow-back" iconStyle={styles.icon} />
         <Text style={styles.title}>What's your name?</Text>
-        <Text style={styles.label}>FIRST NAME</Text>
-        <TextInput
-          onChangeText={e => this.handleChangeFirst(e)}
-          style={styles.textInput}
-        />
-        <Text style={styles.label}>LAST NAME</Text>
-        <TextInput
+        <FormLabel labelStyle={styles.label}>FIRST NAME</FormLabel>
+        <FormInput inputStyle={styles.textInput} onChangeText={null} />
+        <FormLabel labelStyle={styles.label}>LAST NAME</FormLabel>
+        <FormInput
           onChangeText={e => this.handleChangeLast(e)}
-          style={styles.textInput}
+          inputStyle={styles.textInput}
         />
         <TouchableOpacity
           style={{
