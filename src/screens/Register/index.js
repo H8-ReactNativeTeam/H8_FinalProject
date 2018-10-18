@@ -7,7 +7,11 @@ import {
   View
 } from "react-native";
 import { Actions, Router, Scene } from "react-native-router-flux";
-import { Button } from "react-native-elements";
+import {
+  FormLabel,
+  FormInput,
+  FormValidationMessage
+} from "react-native-elements";
 import styles from "./style";
 
 class Register extends Component {
