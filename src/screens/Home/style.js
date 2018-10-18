@@ -1,15 +1,17 @@
+import { Dimensions } from 'react-native';
+var {height, width} = Dimensions.get('window');
+
 const styles = {
   container: {
-    flex: 1,
-    // justifyContent: "center",
-    // alignItems: "center",
-    flexDirection: "column",
-    justifyContent: "flex-start",
+    // // justifyContent: "center",
+    // // alignItems: "center",
+    // flex: 1,
+    // flexDirection: "column",
+    // justifyContent: "flex-start",
     backgroundColor: "#F5FCFF"
   },
   subContainer: {
     padding: 15,
-    marginBottom: 50,
   },
   subTitle: {
     fontSize: 18,
@@ -39,9 +41,9 @@ const styles = {
     color: 'white',
   },
   homeTopView: {
-    backgroundColor: 'rgba(0,0,0,0.35)',
-    padding: 15,
-    maxHeight: 250,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    // padding: 15,
+    height: 250,
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'flex-end',
@@ -50,18 +52,21 @@ const styles = {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-start',
+    flexWrap: "wrap",
+    flexDirection: "row",
     marginLeft: -10,
     marginRight: -10,
     flexWrap: "wrap",
   },
   exploreCard: {
     padding: 10,
-    flexWrap: "wrap",
+    // flex: 1/2,
+    marginBottom: 60,
+    height: 150,
     width: '50%',
-    marginBottom: 40,
   },
   exploreCardContent: {
-    minHeight: 50,
+    // minHeight: 50,
     width: '100%',
     borderColor: 'grey',
     borderWidth: 1,
@@ -73,7 +78,13 @@ const styles = {
     paddingTop: 10,
     paddingLeft: 10,
     paddingRight: 10,
+    paddingBottom: 10,
   },
+  imageFluid: {
+    // width: width/2,
+    width: '100%',
+    height: '100%',
+  }
 };
 
 export default styles;

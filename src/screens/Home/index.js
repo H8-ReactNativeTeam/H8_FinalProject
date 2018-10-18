@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { Text, View, TouchableOpacity } from "react-native";
+import { Text, View, ScrollView, TouchableOpacity, Image } from "react-native";
 import { Actions } from "react-native-router-flux";
-import { List, ListItem, Image, Icon } from "react-native-elements";
+import { List, ListItem, Icon, Card } from "react-native-elements";
 import styles from "./style";
-import { HOME_TOP } from '../../images';
+import {
+  Images,
+} from '@constants';
 
 class Home extends Component {
   constructor(props) {
@@ -12,31 +14,67 @@ class Home extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <View style={ styles.homeTopView }>
-          <Icon name="github" type="font-awesome" size={80} color="#fff" />
-
-          <Text style={ styles.homeTop }>
-            Book unique homes and experiences.
-          </Text>
+      <ScrollView contentContainerStyle={styles.container}>
+        <View style={styles.homeTopView}>
+          <Image
+            style={{ position: 'absolute', height: 300, width: '100%' }}
+            source={Images.HOME_TOP}
+          />
+          <View style={{ padding: 15, backgroundColor: 'rgba:(0,0,0,0.5)' }}>
+            <Icon name="github" type="font-awesome" size={80} color="#fff" />
+            <Text style={styles.homeTop}>
+              Book unique homes and experiences.
+            </Text>
+          </View>
         </View>
 
         <View style={styles.subContainer}>
-          <Text style={ styles.subTitle }>
+          <Text style={styles.subTitle}>
             Explore
           </Text>
+
+          {/* <View style={{ flex: 1 }}>
+            <Card style={{ paddingLeft: 0 }}>
+              <View style={styles.user}>
+                <Image
+                  style={{ width: '100%', minHeight: 300, maxHeight: 300  }}
+                  source={Images.HOME_TOP}
+                />
+                <Text>Homes</Text>
+              </View>
+            </Card>
+            <Card>
+              <View style={styles.user}>
+                <Image
+                  style={{ height: 300, width: '100%' }}
+                  source={Images.HOME_TOP}
+                />
+                <Text>Homes</Text>
+              </View>
+            </Card>
+          </View> */}
 
           <View style={styles.exploreContainer}>
             <View style={styles.exploreCard}>
               <View style={styles.exploreCardContent}>
-                <Text style={ styles.exploreCardTitle }>
+                <Image
+                  style={styles.imageFluid}
+                  source={Images.HOME_TOP}
+                  resizeMode="cover"
+                />
+                <Text style={styles.exploreCardTitle}>
                   Homes
                 </Text>
               </View>
             </View>
             <View style={styles.exploreCard}>
               <View style={styles.exploreCardContent}>
-                <Text style={ styles.exploreCardTitle }>
+                <Image
+                  style={styles.imageFluid}
+                  source={Images.HOME_TOP}
+                  resizeMode="cover"
+                />
+                <Text style={styles.exploreCardTitle}>
                   Experiences
                 </Text>
               </View>
@@ -45,50 +83,56 @@ class Home extends Component {
         </View>
 
         <View style={styles.subContainer}>
-          <Text style={ styles.subTitle }>
+          <Text style={styles.subTitle}>
             Homes around Jakarta
           </Text>
 
           <View style={styles.exploreContainer}>
             <View style={styles.exploreCard}>
               <View style={styles.exploreCardContent}>
-                <Text style={ styles.exploreCardTitle }>
-                  Home 1
+                <Image
+                  style={styles.imageFluid}
+                  source={Images.HOME_TOP}
+                  resizeMode="cover"
+                />
+                <Text style={styles.exploreCardTitle}>
+                  Homes
                 </Text>
               </View>
             </View>
             <View style={styles.exploreCard}>
               <View style={styles.exploreCardContent}>
-                <Text style={ styles.exploreCardTitle }>
-                  Home 2
+                <Image
+                  style={styles.imageFluid}
+                  source={Images.HOME_TOP}
+                  resizeMode="cover"
+                />
+                <Text style={styles.exploreCardTitle}>
+                  Homes
                 </Text>
               </View>
             </View>
             <View style={styles.exploreCard}>
               <View style={styles.exploreCardContent}>
-                <Text style={ styles.exploreCardTitle }>
-                  Home 3
+                <Image
+                  style={styles.imageFluid}
+                  source={Images.HOME_TOP}
+                  resizeMode="cover"
+                />
+                <Text style={styles.exploreCardTitle}>
+                  Homes
                 </Text>
               </View>
             </View>
             <View style={styles.exploreCard}>
               <View style={styles.exploreCardContent}>
-                <Text style={ styles.exploreCardTitle }>
-                  Home 4
-                </Text>
-              </View>
-            </View>
-            <View style={styles.exploreCard}>
-              <View style={styles.exploreCardContent}>
-                <Text style={ styles.exploreCardTitle }>
-                  Home 5
-                </Text>
-              </View>
-            </View>
-            <View style={styles.exploreCard}>
-              <View style={styles.exploreCardContent}>
-                <Text style={ styles.exploreCardTitle }>
-                  Home 6
+                <Image
+                  style={styles.imageFluid}
+                  source={Images.HOME_TOP}
+                  resizeMode="cover"
+                />
+                <Text style={styles.exploreCardTitle}>
+                  Homes
                 </Text>
               </View>
             </View>
@@ -113,7 +157,7 @@ class Home extends Component {
           <Text>Back to Login</Text>
         </TouchableOpacity>
         <Text>Ini Home</Text> */}
-      </View>
+      </ScrollView>
     );
   }
 }
