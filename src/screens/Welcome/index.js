@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
 import { Button, Icon } from "react-native-elements";
 import styles from "./style";
+import { Actions } from "react-native-router-flux";
 export default class Welcome extends Component {
   constructor() {
     super();
@@ -9,6 +10,10 @@ export default class Welcome extends Component {
       emailname: "",
       password: ""
     };
+  }
+
+  goToHome() {
+    Actions.home();
   }
 
   render() {
@@ -29,7 +34,7 @@ export default class Welcome extends Component {
             marginBottom: 15
           }}
         >
-          <Icon name="close" size={35} color="#fffd" />
+          <Icon onPress={() => this.goToHome()} name="close" size={35} color="#fffd" />
           <Text style={{ color: "#fff", fontSize: 20 }}>Log In</Text>
         </View>
 
