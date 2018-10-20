@@ -71,7 +71,7 @@ export default class Welcome extends Component {
           <Button
             rounded
             title="Create Account"
-            outline="true"
+            outline={true}
             fontWeight="bold"
           />
         </View>
