@@ -8,7 +8,7 @@ const styles = {
     // flex: 1,
     // flexDirection: "column",
     // justifyContent: "flex-start",
-    backgroundColor: "#F5FCFF"
+    backgroundColor: "#F5FCFF",
   },
   subContainer: {
     padding: 15,
@@ -84,6 +84,9 @@ const styles = {
     // width: width/2,
     width: '100%',
     height: '100%',
+  },
+  headerNav: {
+    borderWidthBottom: 0,
   }
 };
 
