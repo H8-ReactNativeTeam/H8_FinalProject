@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Router, Scene } from "react-native-router-flux";
-import { Welcome, Home, Login, Register } from "@screens";
+import { Welcome, Home, Login, RegisterName, RegisterEmail } from "@screens";
 
 class App extends Component {
   render() {
@@ -10,7 +10,8 @@ class App extends Component {
           <Scene key="welcome" component={Welcome} />
           <Scene key="login" component={Login} />
           <Scene key="home" component={Home} />
-          <Scene key="register" component={Register} initial />
+          <Scene key="registerName" component={RegisterName} initial />
+          <Scene key="registerEmail" component={RegisterEmail} />
         </Scene>
       </Router>
     );

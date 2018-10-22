@@ -9,7 +9,7 @@ import {
 } from "react-native-elements";
 import styles from "./style";
 
-class Register extends Component {
+class RegisterEmail extends Component {
   constructor(props) {
     super(props);
 
@@ -38,7 +38,11 @@ class Register extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Icon name="arrow-back" iconStyle={styles.icon} />
+        <Icon
+          name="arrow-back"
+          iconStyle={styles.icon}
+          onPress={Actions.registerName}
+        />
         <Text style={styles.title}>What's your name?</Text>
         <FormLabel labelStyle={styles.label}>FIRST NAME</FormLabel>
         <FormInput inputStyle={styles.textInput} onChangeText={null} />
@@ -65,4 +69,4 @@ class Register extends Component {
   }
 }
 
-export default Register;
+export default RegisterEmail;
