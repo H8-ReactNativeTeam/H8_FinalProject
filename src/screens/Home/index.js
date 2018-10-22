@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import { Text, View, ScrollView, TouchableOpacity, Image } from "react-native";
 // import { Actions } from "react-native-router-flux";
-import { List, ListItem, Icon, Card } from "react-native-elements";
+import { Icon, Rating } from "react-native-elements";
 import { HeaderNav } from "@organisms";
+import { 
+  ExploreCard, 
+  ProductCard 
+} from "@molecules";
 import styles from "./style";
 import {
   Images,
@@ -19,17 +23,15 @@ class Home extends Component {
         <HeaderNav />
 
         <ScrollView contentContainerStyle={styles.container}>
+          <Image
+            style={{ position: 'absolute', height: 250, width: '100%' }}
+            source={Images.HOME_TOP}
+          />
           <View style={styles.homeTopView}>
-            <Image
-              style={{ position: 'absolute', height: 300, width: '100%' }}
-              source={Images.HOME_TOP}
-            />
-            <View style={{ padding: 15, backgroundColor: 'rgba:(0,0,0,0.5)' }}>
-              <Icon name="github" type="font-awesome" size={80} color="#fff" />
-              <Text style={styles.homeTop}>
-                Book unique homes and experiences.
-              </Text>
-            </View>
+            <Icon name="github" type="font-awesome" size={80} color="#fff" />
+            <Text style={styles.homeTop}>
+              Book unique homes and experiences.
+            </Text>
           </View>
 
           <View style={styles.subContainer}>
@@ -37,53 +39,11 @@ class Home extends Component {
               Explore
             </Text>
 
-            {/* <View style={{ flex: 1 }}>
-              <Card style={{ paddingLeft: 0 }}>
-                <View style={styles.user}>
-                  <Image
-                    style={{ width: '100%', minHeight: 300, maxHeight: 300  }}
-                    source={Images.HOME_TOP}
-                  />
-                  <Text>Homes</Text>
-                </View>
-              </Card>
-              <Card>
-                <View style={styles.user}>
-                  <Image
-                    style={{ height: 300, width: '100%' }}
-                    source={Images.HOME_TOP}
-                  />
-                  <Text>Homes</Text>
-                </View>
-              </Card>
-            </View> */}
-
-            <View style={styles.exploreContainer}>
-              <View style={styles.exploreCard}>
-                <View style={styles.exploreCardContent}>
-                  <Image
-                    style={styles.imageFluid}
-                    source={Images.HOME_TOP}
-                    resizeMode="cover"
-                  />
-                  <Text style={styles.exploreCardTitle}>
-                    Homes
-                  </Text>
-                </View>
-              </View>
-              <View style={styles.exploreCard}>
-                <View style={styles.exploreCardContent}>
-                  <Image
-                    style={styles.imageFluid}
-                    source={Images.HOME_TOP}
-                    resizeMode="cover"
-                  />
-                  <Text style={styles.exploreCardTitle}>
-                    Experiences
-                  </Text>
-                </View>
-              </View>
-            </View>
+            <ScrollView horizontal={true} contentContainerStyle={styles.exploreScrollContainer}>
+              <ExploreCard title="Homes" image={Images.EXPLORE_HOMES} />
+              <ExploreCard title="Experiences" image={Images.EXPLORE_EXPERIENCES} />
+              <ExploreCard title="Restaurants" image={Images.EXPLORE_RESTAURANTS} />
+            </ScrollView>
           </View>
 
           <View style={styles.subContainer}>
@@ -92,60 +52,71 @@ class Home extends Component {
             </Text>
 
             <View style={styles.exploreContainer}>
-              <View style={styles.exploreCard}>
-                <View style={styles.exploreCardContent}>
-                  <Image
-                    style={styles.imageFluid}
-                    source={Images.HOME_TOP}
-                    resizeMode="cover"
-                  />
-                  <Text style={styles.exploreCardTitle}>
-                    Homes
-                  </Text>
-                </View>
-              </View>
-              <View style={styles.exploreCard}>
-                <View style={styles.exploreCardContent}>
-                  <Image
-                    style={styles.imageFluid}
-                    source={Images.HOME_TOP}
-                    resizeMode="cover"
-                  />
-                  <Text style={styles.exploreCardTitle}>
-                    Homes
-                  </Text>
-                </View>
-              </View>
-              <View style={styles.exploreCard}>
-                <View style={styles.exploreCardContent}>
-                  <Image
-                    style={styles.imageFluid}
-                    source={Images.HOME_TOP}
-                    resizeMode="cover"
-                  />
-                  <Text style={styles.exploreCardTitle}>
-                    Homes
-                  </Text>
-                </View>
-              </View>
-              <View style={styles.exploreCard}>
-                <View style={styles.exploreCardContent}>
-                  <Image
-                    style={styles.imageFluid}
-                    source={Images.HOME_TOP}
-                    resizeMode="cover"
-                  />
-                  <Text style={styles.exploreCardTitle}>
-                    Homes
-                  </Text>
-                </View>
-              </View>
+              <ProductCard title="Homes" image={Images.EXPLORE_HOMES}>
+                <Text style={styles.productSubTitle}>Entire Apartment</Text>
+                {/* <Text>{`\n`}</Text> */}
+                <Text style={styles.productTitle}>Great Apartment in Jakarta</Text>
+                {/* <Text>{`\n`}</Text> */}
+                <Text>200.000 IDR per night</Text>
+                {/* <Text>{`\n`}</Text> */}
+                <Rating
+                  style={{marginTop:10}}
+                  imageSize={20}
+                  readonly
+                  startingValue={5}
+                />
+              </ProductCard>
+
+              <ProductCard title="Homes" image={Images.EXPLORE_HOMES}>
+                <Text style={styles.productSubTitle}>Entire Apartment</Text>
+                {/* <Text>{`\n`}</Text> */}
+                <Text style={styles.productTitle}>Great Apartment in Jakarta</Text>
+                {/* <Text>{`\n`}</Text> */}
+                <Text>200.000 IDR per night</Text>
+                {/* <Text>{`\n`}</Text> */}
+                <Rating
+                  style={{marginTop:10}}
+                  imageSize={20}
+                  readonly
+                  startingValue={5}
+                />
+              </ProductCard>
+
+              <ProductCard title="Homes" image={Images.EXPLORE_HOMES}>
+                <Text style={styles.productSubTitle}>Entire Apartment</Text>
+                {/* <Text>{`\n`}</Text> */}
+                <Text style={styles.productTitle}>Great Apartment in Jakarta</Text>
+                {/* <Text>{`\n`}</Text> */}
+                <Text>200.000 IDR per night</Text>
+                {/* <Text>{`\n`}</Text> */}
+                <Rating
+                  style={{marginTop:10}}
+                  imageSize={20}
+                  readonly
+                  startingValue={5}
+                />
+              </ProductCard>
+
+              <ProductCard title="Homes" image={Images.EXPLORE_HOMES}>
+                <Text style={styles.productSubTitle}>Entire Apartment</Text>
+                {/* <Text>{`\n`}</Text> */}
+                <Text style={styles.productTitle}>Great Apartment in Jakarta</Text>
+                {/* <Text>{`\n`}</Text> */}
+                <Text>200.000 IDR per night</Text>
+                {/* <Text>{`\n`}</Text> */}
+                <Rating
+                  style={{marginTop:10}}
+                  imageSize={20}
+                  readonly
+                  startingValue={5}
+                />
+              </ProductCard>
             </View>
           </View>
 
-          {/* <Image
-            source={ HOME_TOP }
-          /> */}
+          <View style={{paddingTop: 50, height: 50, backgroundColor: "#F5FCFF",}}>
+            <Text>&copy; 2018</Text>
+          </View>
 
           {/* <TouchableOpacity
             style={{

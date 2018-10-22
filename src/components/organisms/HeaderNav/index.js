@@ -15,7 +15,7 @@ class HeaderNav extends Component {
           style={styles.headerNav}
           outerContainerStyles={{
             borderBottomWidth: 0,
-            // marginTop: -10,
+            marginTop: -15,
             backgroundColor: '#007D8C',
           }}
           leftComponent={{ icon: 'menu', color: '#fff' }}

@@ -41,12 +41,13 @@ const styles = {
     color: 'white',
   },
   homeTopView: {
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    // padding: 15,
+    backgroundColor: 'rgba(0,0,0,0.3)',
+    padding: 15,
     height: 250,
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
   },
   exploreContainer: {
     flex: 1,
@@ -54,9 +55,17 @@ const styles = {
     justifyContent: 'flex-start',
     flexWrap: "wrap",
     flexDirection: "row",
-    marginLeft: -10,
-    marginRight: -10,
+    marginLeft: -5,
+    marginRight: -5,
     flexWrap: "wrap",
+  },
+  exploreScrollContainer: {
+    // flex: 1,
+    // flexDirection: 'row',
+    // justifyContent: 'flex-start',
+    marginLeft: -5,
+    marginRight: -5,
+    // width: '100%',
   },
   exploreCard: {
     padding: 10,
@@ -87,7 +96,14 @@ const styles = {
   },
   headerNav: {
     borderWidthBottom: 0,
-  }
+  },
+  productSubTitle: {
+    color: 'darkgrey',
+    marginBottom: 5,
+  },
+  productTitle: {
+    fontSize: 20,
+  },
 };
 
 export default styles;
