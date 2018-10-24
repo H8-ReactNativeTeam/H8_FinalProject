@@ -38,6 +38,12 @@ const styles = {
     marginLeft: -20,
     marginRight: 0,
     marginBottom: 20
+  },
+  textPromo: {
+    fontSize: 16,
+    color: "white",
+    marginLeft: -5,
+    marginBottom: 10
   }
 };
 

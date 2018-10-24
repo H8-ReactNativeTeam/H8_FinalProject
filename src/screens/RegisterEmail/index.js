@@ -43,27 +43,18 @@ class RegisterEmail extends Component {
           iconStyle={styles.icon}
           onPress={Actions.registerName}
         />
-        <Text style={styles.title}>What's your name?</Text>
-        <FormLabel labelStyle={styles.label}>FIRST NAME</FormLabel>
+        <Text style={styles.title}>And, your email?</Text>
+        <FormLabel labelStyle={styles.label}>EMAIL ADDRESS</FormLabel>
         <FormInput inputStyle={styles.textInput} onChangeText={null} />
-        <FormLabel labelStyle={styles.label}>LAST NAME</FormLabel>
-        <FormInput
-          onChangeText={e => this.handleChangeLast(e)}
-          inputStyle={styles.textInput}
-        />
-        <TouchableOpacity
-          style={{
-            borderWidth: 1,
-            borderColor: "green",
-            width: 120,
-            height: 60,
-            justifyContent: "center",
-            alignItems: "center"
-          }}
-          onPress={() => this.handleLoginPress()}
-        >
-          <Text>Register</Text>
-        </TouchableOpacity>
+        <Text style={styles.textPromo}>
+          I'd like to receive promotional communications, including discounts,
+          surveys, inspiration, and love from Airbnb via email, SMS, and phone.
+        </Text>
+        <Text style={styles.textPromo}>
+          I don't want to receive marketing messages from Airbnb. I can opt out
+          of receiving these at any time in my account settings or via the link
+          in the message.
+        </Text>
       </View>
     );
   }
