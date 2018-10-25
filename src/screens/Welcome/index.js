@@ -42,9 +42,14 @@ export default class Welcome extends Component {
             marginBottom: 15
           }}
         >
-          <Icon onPress={() => this.goToHome()} name="close" size={35} color="#fffd" />
-          
-          <Text style={{ color: "#fff", fontSize: 20 }} onPress={() => this.goToLogin()}>Log In</Text>
+          <Icon />
+
+          <Text
+            style={{ color: "#fff", fontSize: 20 }}
+            onPress={() => this.goToLogin()}
+          >
+            Log In
+          </Text>
         </View>
 
         <View

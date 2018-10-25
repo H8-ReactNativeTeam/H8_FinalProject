@@ -55,6 +55,12 @@ class RegisterEmail extends Component {
           of receiving these at any time in my account settings or via the link
           in the message.
         </Text>
+        <Icon
+          name="chevron-with-circle-right"
+          type="entypo"
+          iconStyle={styles.iconNext}
+          onPress={Actions.home}
+        />
       </View>
     );
   }
