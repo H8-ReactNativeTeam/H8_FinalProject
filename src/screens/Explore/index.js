@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Text, View, ScrollView, TouchableOpacity, Image } from "react-native";
 import { Actions } from "react-native-router-flux";
 import { Icon, Rating } from "react-native-elements";
-// import { HeaderNav } from "@organisms";
 import { 
   ExploreCard, 
   ProductCard 
@@ -11,54 +10,27 @@ import styles from "./style";
 import {
   Images,
 } from '@constants';
+import { ActionConst } from "react-native-router-flux";
 
-class Home extends Component {
+class Explore extends Component {
   // constructor(props) {
   //   super(props);
   // }
 
-  goToExplore() {
-    Actions.explore();
-  }
-
   render() {
     return (
       <View>
-        {/* <HeaderNav /> */}
-
+        <Icon
+          raised
+          name='chevron-left'
+          type='font-awesome'
+          // color='#f50'
+          onPress={() => Actions.home() } 
+        />
         <ScrollView contentContainerStyle={styles.container}>
-          <Image
-            style={{ position: 'absolute', height: 250, width: '100%' }}
-            source={Images.HOME_TOP}
-          />
-          <View style={styles.homeTopView}>
-            <Icon name="github" type="font-awesome" size={80} color="#fff" />
-            <Text style={styles.homeTop}>
-              Book unique homes and experiences.
-            </Text>
-          </View>
-
           <View style={styles.subContainer}>
             <Text style={styles.subTitle}>
               Explore
-            </Text>
-
-            <ScrollView horizontal={true} contentContainerStyle={styles.exploreScrollContainer}>
-              <TouchableOpacity onPress={ () => this.goToExplore() }>
-                <ExploreCard title="Homes" image={Images.EXPLORE_HOMES} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={ () => this.goToExplore() }>
-                <ExploreCard title="Experiences" image={Images.EXPLORE_EXPERIENCES} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={ () => this.goToExplore() }>
-                <ExploreCard title="Restaurants" image={Images.EXPLORE_RESTAURANTS} />
-              </TouchableOpacity>
-            </ScrollView>
-          </View>
-
-          <View style={styles.subContainer}>
-            <Text style={styles.subTitle}>
-              Homes around Jakarta
             </Text>
 
             <View style={styles.exploreContainer}>
@@ -148,4 +120,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Explore;
