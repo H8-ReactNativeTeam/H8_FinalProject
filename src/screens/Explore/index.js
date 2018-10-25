@@ -17,6 +17,9 @@ class Explore extends Component {
   //   super(props);
   // }
 
+  goToDetailProduct() {
+    Actions.detailProduct();
+  }
   render() {
     return (
       <View>
@@ -30,69 +33,77 @@ class Explore extends Component {
         <ScrollView contentContainerStyle={styles.container}>
           <View style={styles.subContainer}>
             <Text style={styles.subTitle}>
-              Explore
+              Detail Room
             </Text>
 
             <View style={styles.exploreContainer}>
-              <ProductCard title="Homes" image={Images.EXPLORE_HOMES}>
-                <Text style={styles.productSubTitle}>Entire Apartment</Text>
-                {/* <Text>{`\n`}</Text> */}
-                <Text style={styles.productTitle}>Great Apartment in Jakarta</Text>
-                {/* <Text>{`\n`}</Text> */}
-                <Text>200.000 IDR per night</Text>
-                {/* <Text>{`\n`}</Text> */}
-                <Rating
-                  style={{marginTop:10}}
-                  imageSize={20}
-                  readonly
-                  startingValue={5}
-                />
-              </ProductCard>
+              <TouchableOpacity onPress={ () => this.goToDetailProduct() }>
+                <ProductCard title="Homes" image={Images.EXPLORE_HOMES}>
+                  <Text style={styles.productSubTitle}>Entire Apartment</Text>
+                  {/* <Text>{`\n`}</Text> */}
+                  <Text style={styles.productTitle}>Great Apartment in Jakarta</Text>
+                  {/* <Text>{`\n`}</Text> */}
+                  <Text>200.000 IDR per night</Text>
+                  {/* <Text>{`\n`}</Text> */}
+                  <Rating
+                    style={{marginTop:10}}
+                    imageSize={20}
+                    readonly
+                    startingValue={5}
+                  />
+                </ProductCard>
+              </TouchableOpacity>
 
-              <ProductCard title="Homes" image={Images.HOME_ONE}>
-                <Text style={styles.productSubTitle}>Treehouse</Text>
-                {/* <Text>{`\n`}</Text> */}
-                <Text style={styles.productTitle}>Secluded Intown Treehouse</Text>
-                {/* <Text>{`\n`}</Text> */}
-                <Text>150.000 IDR per night</Text>
-                {/* <Text>{`\n`}</Text> */}
-                <Rating
-                  style={{marginTop:10}}
-                  imageSize={20}
-                  readonly
-                  startingValue={5}
-                />
-              </ProductCard>
+              <TouchableOpacity onPress={ () => this.goToDetailProduct() }>
+                <ProductCard title="Homes" image={Images.HOME_ONE}>
+                  <Text style={styles.productSubTitle}>Treehouse</Text>
+                  {/* <Text>{`\n`}</Text> */}
+                  <Text style={styles.productTitle}>Secluded Intown Treehouse</Text>
+                  {/* <Text>{`\n`}</Text> */}
+                  <Text>150.000 IDR per night</Text>
+                  {/* <Text>{`\n`}</Text> */}
+                  <Rating
+                    style={{marginTop:10}}
+                    imageSize={20}
+                    readonly
+                    startingValue={5}
+                  />
+                </ProductCard>
+              </TouchableOpacity>
 
-              <ProductCard title="Homes" image={Images.HOME_TWO}>
-                <Text style={styles.productSubTitle}>Highest value Apartment studio</Text>
-                {/* <Text>{`\n`}</Text> */}
-                <Text style={styles.productTitle}>Great Apartment in Jakarta</Text>
-                {/* <Text>{`\n`}</Text> */}
-                <Text>200.000 IDR per night</Text>
-                {/* <Text>{`\n`}</Text> */}
-                <Rating
-                  style={{marginTop:10}}
-                  imageSize={20}
-                  readonly
-                  startingValue={5}
-                />
-              </ProductCard>
+              <TouchableOpacity onPress={ () => this.goToDetailProduct() }>
+                <ProductCard title="Homes" image={Images.HOME_TWO}>
+                  <Text style={styles.productSubTitle}>Highest value Apartment studio</Text>
+                  {/* <Text>{`\n`}</Text> */}
+                  <Text style={styles.productTitle}>Great Apartment in Jakarta</Text>
+                  {/* <Text>{`\n`}</Text> */}
+                  <Text>200.000 IDR per night</Text>
+                  {/* <Text>{`\n`}</Text> */}
+                  <Rating
+                    style={{marginTop:10}}
+                    imageSize={20}
+                    readonly
+                    startingValue={5}
+                  />
+                </ProductCard>
+              </TouchableOpacity>
 
-              <ProductCard title="Homes" image={Images.EXPLORE_HOMES}>
-                <Text style={styles.productSubTitle}>Entire Apartment</Text>
-                {/* <Text>{`\n`}</Text> */}
-                <Text style={styles.productTitle}>Great Apartment in Jakarta</Text>
-                {/* <Text>{`\n`}</Text> */}
-                <Text>200.000 IDR per night</Text>
-                {/* <Text>{`\n`}</Text> */}
-                <Rating
-                  style={{marginTop:10}}
-                  imageSize={20}
-                  readonly
-                  startingValue={5}
-                />
-              </ProductCard>
+              <TouchableOpacity onPress={ () => this.goToDetailProduct() }>
+                <ProductCard title="Homes" image={Images.EXPLORE_HOMES}>
+                  <Text style={styles.productSubTitle}>Entire Apartment</Text>
+                  {/* <Text>{`\n`}</Text> */}
+                  <Text style={styles.productTitle}>Great Apartment in Jakarta</Text>
+                  {/* <Text>{`\n`}</Text> */}
+                  <Text>200.000 IDR per night</Text>
+                  {/* <Text>{`\n`}</Text> */}
+                  <Rating
+                    style={{marginTop:10}}
+                    imageSize={20}
+                    readonly
+                    startingValue={5}
+                  />
+                </ProductCard>
+              </TouchableOpacity>
             </View>
           </View>
 

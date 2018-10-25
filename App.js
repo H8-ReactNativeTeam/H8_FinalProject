@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Router, Scene } from "react-native-router-flux";
-import { Welcome, Home, Login, RegisterName, RegisterEmail, Explore } from "@screens";
+import { Welcome, Home, Login, RegisterName, RegisterEmail, Explore, DetailProduct } from "@screens";
 
 class App extends Component {
   render() {
@@ -13,6 +13,7 @@ class App extends Component {
           <Scene key="registerName" component={RegisterName}  />
           <Scene key="registerEmail" component={RegisterEmail} />
           <Scene key="explore" component={Explore} />
+          <Scene key="detailProduct" component={DetailProduct} />
         </Scene>
       </Router>
     );
