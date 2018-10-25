@@ -16,6 +16,14 @@ export default class Welcome extends Component {
     Actions.home();
   }
 
+  goToLogin() {
+    Actions.login();
+  }
+
+  goToRegister() {
+    Actions.registerName();
+  }
+
   render() {
     return (
       <View
@@ -35,7 +43,8 @@ export default class Welcome extends Component {
           }}
         >
           <Icon onPress={() => this.goToHome()} name="close" size={35} color="#fffd" />
-          <Text style={{ color: "#fff", fontSize: 20 }}>Log In</Text>
+          
+          <Text style={{ color: "#fff", fontSize: 20 }} onPress={() => this.goToLogin()}>Log In</Text>
         </View>
 
         <View
@@ -73,6 +82,7 @@ export default class Welcome extends Component {
             title="Create Account"
             outline={true}
             fontWeight="bold"
+            onPress={() => this.goToRegister()}
           />
         </View>
         <View style={{ marginBottom: 40 }}>

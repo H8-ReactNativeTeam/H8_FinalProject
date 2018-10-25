@@ -31,14 +31,14 @@ class RegisterName extends Component {
     });
   }
 
-  handleLoginPress() {
-    Actions.home();
+  goWelcome() {
+    Actions.welcome();
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Icon name="arrow-back" iconStyle={styles.iconBack} />
+        <Icon name="arrow-back" iconStyle={styles.iconBack} onPress={ () => this.goWelcome() } />
         <Text style={styles.title}>What's your name?</Text>
         <FormLabel labelStyle={styles.label}>FIRST NAME</FormLabel>
         <FormInput inputStyle={styles.textInput} onChangeText={null} />
